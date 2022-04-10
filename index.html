@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Facundo Rodríguez</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+      integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;500;600&family=PT+Sans&family=Schoolbell&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <nav id="navbar" class="navbar">
+      <div class="nav-container">
+        <nav>
+          <a class="logo" href="#"><span>{</span>FR<span>}</span></a>
+          <button class="open-menu" aria-label="Cerrar Menú">
+            <span><i class="fas fa-arrow-left"></i></span>
+          </button>
+          <ul class="nav-menu dont-show">
+            <button class="close-menu" aria-label="Abrir Menú">
+              <span><i class="fas fa-arrow-right"></i></span>
+            </button>
+            <li><a href="#home">Inicio</a></li>
+            <li><a href="#about">Sobre mí</a></li>
+            <li><a href="#project">Proyectos</a></li>
+            <li><a href="#contact">Contacto</a></li>
+            <div>Facundo Rodríguez ®2022</div>
+          </ul>
+        </nav>
+      </div>
+    </nav>
+    <main class="page-container">
+      <section id="home">
+        <div class="s-home">
+          <img
+            class="img-profile"
+            src="img/profile-photo.jpeg"
+            alt="Foto de perfil"
+          />
+          <div>
+            <h1>
+              Hola, me llamo <br />
+              Facundo Rodriguez
+            </h1>
+            <h4>Desarrollador Full Stack (Junior)</h4>
+          </div>
+        </div>
+      </section>
+      <section id="about">
+        <div class="s-content">
+          <h2><span>{</span>Información personal<span>}</span></h2>
+          <p>
+            Me llamo Facundo Rodríguez, nací en Trinidad - Flores (Uruguay).
+            <br />
+            Tengo <span id="yOld"></span> años.
+          </p>
+          <p>
+            Tuve mi primer "contacto" con la programacion cuando en la
+            escuela(primaria) conocí Tortugarte, un programa donde se le indíca
+            a una tortuga las acciones a seguir, basado en bloques se construye
+            un pseudo código dandole las indicaciones una a una.
+          </p>
+          <p>
+            Con 18 años, y aún no sabiendo que iba a hacer con mi destino,
+            realicé un curso de Asistente Comercial para Pequeñas y Medianas
+            Empresas en un centro educativo de mi ciudad, donde al finalizar el
+            curso, gracias a mi desempeño en Excel, fui invitado a participar de
+            otro curso pero esta vez de Java. Nunca me dí la oportunidad de
+            hacerlo ya que creía que la programación no era para mí, tenía
+            amigos que ya programaban o rondaban ese ámbito desde pequeños, y no
+            me veía igual a ellos.
+          </p>
+          <p>
+            Ya de grande investigué un poco por mi cuenta que era aquello que
+            había sido invitado a cursar, y porqué podía ser para mí. Encontré
+            un mundo totalmente diferente a mis creencias, y busqué por algún
+            lado como entrar a este maravilloso mundo.
+          </p>
+          <p>
+            Así fue que en el 2021 realicé un curso intensivo de Front-End
+            enfocado en HTML, CSS y JavaScript, el cual sembró ganas de seguir
+            adentrándome en esto del desarrollo web. Seguido a ese curso decidí
+            seguir adelante y cursar un Coding Bootcamp extremendamente
+            intensivo con dedicación full time.
+          </p>
+        </div>
+      </section>
+      <section id="project">
+        <div class="s-content">
+          <h2><span>{</span>Mis proyectos<span>}</span></h2>
+          <p>
+            Por ahora no tengo ningun proyecto personal terminado, asi que:
+            <br />
+            COMING SOON...
+          </p>
+        </div>
+      </section>
+      <section id="contact">
+        <div class="s-content">
+          <h2><span>{</span>Contacto<span>}</span></h2>
+          <div class="row">
+            <div>
+              <a
+                class="iContact"
+                href="https://www.linkedin.com/in/facundo-rodriguez-03a307226/"
+                ><span><i class="fab fa-linkedin-in"></i></span
+              ></a>
+              <h4>Contáctame</h4>
+            </div>
+            <div>
+              <a class="iContact" href="mailto:facundo.rod99@gmail.com"
+                ><span><i class="far fa-envelope"></i></span
+              ></a>
+              <h4>Mi Mail</h4>
+            </div>
+            <div>
+              <a
+                class="iContact"
+                href="https://www.instagram.com/chum0rrow/?hl=es-la"
+                ><span><i class="fab fa-instagram"></i></span
+              ></a>
+              <h4>Sígueme</h4>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer>Facundo Rodriguez ®2022</footer>
+    <script src="js/app.js"></script>
+  </body>
+</html>

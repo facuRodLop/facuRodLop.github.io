@@ -1,0 +1,421 @@
+:root {
+  --page-bg-color-1: #00b7d4;
+  --page-bg-color-2: #505488;
+  --page-bg-color-3: #2f3f80;
+  --page-bg-color-4: #161569;
+  --page-bg-color-5: #5a4894;
+  --page-bg-color-6: #a950a1;
+  --page-bg-color-7: #ff7cae;
+  --white: whitesmoke;
+  --light: rgb(161, 161, 161);
+  --bg-section: rgba(255, 255, 255, 0.5);
+  --font-color-section: black;
+  --color-decoration-section: yellow;
+}
+
+/* //////////////////////////////////// Navbar CSS //////////////////////////////////// */
+
+.navbar {
+  width: 100%;
+  padding: 0.8rem 0;
+  position: fixed;
+  top: 0;
+  transition: 0.6s;
+  z-index: 100000;
+}
+
+.navbar-bg {
+  background-color: rgba(0, 0, 0, 0.45);
+  backdrop-filter: blur(5px);
+}
+
+.nav-container nav {
+  display: flex;
+  justify-content: space-between;
+  line-height: 50px;
+  align-items: center;
+  margin: 0 20px;
+}
+
+/* Logo */
+
+.logo {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 50px;
+  color: whitesmoke;
+  transition: 0.6s;
+}
+
+.logo span {
+  position: relative;
+  bottom: 4px;
+  color: yellow;
+}
+
+/* Menú */
+
+.nav-menu {
+  font-size: 20px;
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-menu li {
+  list-style: none;
+}
+
+.nav-menu li a {
+  color: rgb(161, 161, 161);
+  margin-left: 15px;
+}
+
+.nav-menu li a:hover {
+  color: whitesmoke;
+  box-shadow: 0 5px yellow;
+  animation: sbanimado 0.3s forwards;
+}
+
+/* Button Toggle */
+
+.open-menu,
+.close-menu {
+  display: none;
+}
+
+.menu-opened {
+  right: 0;
+  animation: navOpen 0.3s forwards;
+}
+
+.menu-closed {
+  right: -40%;
+  animation: navClose 0.3s forwards;
+}
+
+.nav-menu div {
+  display: none;
+}
+
+/* @Medias Q */
+
+@media (max-width: 950px) {
+  .open-menu,
+  .close-menu {
+    display: block;
+    font-size: 30px;
+    position: relative;
+    background: none;
+    border: none;
+    color: whitesmoke;
+    cursor: pointer;
+  }
+
+  .open-menu a:active,
+  .close-menu a:active {
+    font-size: 25px;
+  }
+
+  .close-menu {
+    left: 20px;
+    width: 45px;
+    margin-bottom: 100px;
+  }
+
+  .dont-show {
+    display: none;
+  }
+
+  .nav-menu {
+    flex-direction: column;
+    position: fixed;
+    right: 0;
+    top: 0;
+    width: 40%;
+    background-color: rgba(0, 0, 0, 0.85);
+    height: 100vh;
+    padding-top: 17px;
+    overflow-y: auto;
+  }
+
+  .nav-menu li {
+    margin: 0 0 20px 10px;
+  }
+
+  .nav-menu li a {
+    color: rgb(161, 161, 161);
+    padding-left: 0;
+    padding-right: 50px;
+    width: 100px;
+    overflow: hidden;
+  }
+
+  .nav-menu li a:hover {
+    color: whitesmoke;
+    box-shadow: 0 5px yellow;
+    animation: sbanimado 0.3s forwards;
+  }
+
+  .nav-menu div {
+    display: block;
+    color: gray;
+    font-size: 16px;
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+  }
+
+  footer {
+    display: none;
+  }
+}
+
+@media (max-width: 661px) {
+  .nav-menu {
+    width: 100%;
+  }
+  .menu-closed {
+    right: -100%;
+    animation: navCloseMin 0.3s forwards;
+  }
+  .menu-opened {
+    animation: navOpenMin 0.3s forwards;
+    backdrop-filter: blur(5px);
+  }
+}
+
+/* //////////////////////////////////// Page CSS //////////////////////////////////// */
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 6.5rem;
+}
+
+body {
+  margin: 0;
+  font-family: "Montserrat", sans-serif;
+  background-image: linear-gradient(
+    135deg,
+    var(--page-bg-color-1),
+    var(--page-bg-color-2),
+    var(--page-bg-color-3),
+    var(--page-bg-color-4),
+    var(--page-bg-color-5),
+    var(--page-bg-color-6)
+  );
+  background-size: 500%;
+  animation: fanimado 60s infinite;
+}
+
+.page-container,
+.nav-container {
+  max-width: 1020px;
+  margin: auto;
+}
+
+h2 {
+  margin-top: 0;
+  margin-bottom: 20px;
+  font-size: 25px;
+}
+
+h3 {
+  margin-top: 0;
+  margin-bottom: 15px;
+  font-size: 21px;
+}
+
+p {
+  font-size: 18px;
+}
+
+a {
+  text-decoration: none;
+}
+
+main section {
+  margin: 0 10px 30px;
+}
+
+/* section Home */
+
+#home {
+  margin: 0;
+  height: 100vh;
+}
+
+.s-home {
+  display: flex;
+  align-items: center;
+  height: 100vh;
+  width: max-content;
+  margin: auto;
+}
+
+.s-home h1 {
+  margin: 0;
+  font-size: 35px;
+  color: var(--white);
+}
+
+.s-home h4 {
+  font-size: 1.5rem;
+  margin: 0;
+  color: rgb(161, 161, 161);
+}
+
+.img-profile {
+  width: 300px;
+  border-radius: 50%;
+  color: var(--white);
+  margin: 0 50px 0 0;
+}
+
+/* Section About */
+
+.s-content {
+  background-color: var(--bg-section);
+  padding: 30px;
+  color: var(--font-color-section);
+}
+
+.s-content h2 span {
+  color: var(--color-decoration-section);
+}
+
+/* Footer */
+
+footer {
+  color: var(--white);
+  text-align: end;
+  margin: 0 10px 10px 0;
+}
+
+/* Section Contact */
+
+.row {
+  display: flex;
+  justify-content: space-around;
+}
+
+.iContact {
+  padding: 0 30px;
+  font-size: 500%;
+  color: rgba(0, 0, 0, 0.8);
+}
+
+.row div h4 {
+  text-align: center;
+  margin: 0;
+}
+
+/* @Media */
+
+@media (max-width: 700px) {
+  .s-home {
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+  }
+  .s-home img {
+    margin: 0;
+  }
+}
+
+/* Animatronicos :D */
+
+@keyframes fanimado {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@keyframes sbanimado {
+  0% {
+    box-shadow: 0 1.5px rgba(255, 255, 0, 0.329);
+  }
+  50% {
+    box-shadow: 0 3px rgba(255, 255, 0, 0.658);
+  }
+  100% {
+    box-shadow: 0 4px rgba(255, 255, 0);
+  }
+}
+
+@keyframes navOpen {
+  0% {
+    right: -40%;
+  }
+  25% {
+    right: -30%;
+  }
+  50% {
+    right: -20%;
+  }
+  75% {
+    right: -10%;
+  }
+  100% {
+    right: 0;
+  }
+}
+
+@keyframes navOpenMin {
+  0% {
+    right: -100%;
+  }
+  25% {
+    right: -75%;
+  }
+  50% {
+    right: -50%;
+  }
+  75% {
+    right: -25%;
+  }
+  100% {
+    right: 0;
+  }
+}
+
+@keyframes navClose {
+  0% {
+    right: 0;
+  }
+  25% {
+    right: -10%;
+  }
+  50% {
+    right: -20%;
+  }
+  75% {
+    right: -30%;
+  }
+  100% {
+    right: -40%;
+  }
+}
+
+@keyframes navCloseMin {
+  0% {
+    right: 0;
+  }
+  25% {
+    right: -25%;
+  }
+  50% {
+    right: -50%;
+  }
+  75% {
+    right: -75%;
+  }
+  100% {
+    right: -100%;
+  }
+}
